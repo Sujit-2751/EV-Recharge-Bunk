@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EV Recharge — Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Admin Dashboard</h1>
+    <p class="tag">Manage bunks, locations & slots</p>
+    <div class="header-actions">
+      <button id="logoutBtn" class="btn ghost">Logout</button>
+    </div>
+  </header>
+
+  <main class="container admin-grid">
+    <section class="card">
+      <h3>Locations</h3>
+      <form id="locationForm" class="small-form">
+        <input id="locName" placeholder="Name" required>
+        <input id="locCity" placeholder="City" required>
+        <input id="locLat" placeholder="Latitude">
+        <input id="locLng" placeholder="Longitude">
+        <button class="btn">Add Location</button>
+      </form>
+      <div id="locationsList" class="list"></div>
+    </section>
+
+    <section class="card">
+      <h3>Bunks</h3>
+      <form id="bunkForm" class="small-form">
+        <select id="bunkLocation"></select>
+        <input id="bunkName" placeholder="Bunk name" required>
+        <input id="bunkAddress" placeholder="Address">
+        <input id="bunkChargers" type="number" min="0" placeholder="Chargers">
+        <button class="btn">Add Bunk</button>
+      </form>
+      <div id="bunksList" class="list"></div>
+    </section>
+
+    <section class="card">
+      <h3>Recharge Slots</h3>
+      <form id="slotForm" class="small-form">
+        <select id="slotBunk"></select>
+        <input id="slotDate" type="date" required>
+        <input id="slotStart" type="time" required>
+        <input id="slotEnd" type="time" required>
+        <input id="slotCapacity" type="number" min="1" placeholder="Capacity" required>
+        <button class="btn">Add Slot</button>
+      </form>
+      <div id="slotsList" class="list"></div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

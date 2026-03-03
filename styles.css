@@ -1,0 +1,109 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1120;
+  --accent: #00d1b2;
+  --accent-2: #6a7cff;
+  --muted: #98a0b3;
+  --glass: rgba(255,255,255,0.04);
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, #071028 0%, #081028 60%);
+  color: #e6eef8;
+}
+
+/* Layout */
+.site-header {
+  padding: 28px 20px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #042;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header h1 { margin: 0; font-size: 20px; color: #042; }
+.site-header .tag { opacity: .9; margin-left: 12px; color: #042; }
+.header-actions { display: flex; gap: 10px; align-items: center; }
+
+.container { max-width: 1100px; margin: 28px auto; padding: 0 16px; }
+
+/* Cards */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+}
+.auth-card { max-width: 420px; margin: 30px auto; padding: 28px; }
+
+/* Typography & form labels */
+h2, h3 { margin: 0 0 12px; }
+label { display: block; margin-bottom: 8px; font-size: 14px; color: var(--muted); }
+.muted { color: var(--muted); font-size: 13px; }
+
+/* Form controls */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: transparent;
+  color: inherit;
+  margin-top: 6px;
+}
+.small-form input, .small-form select { display: inline-block; width: calc(100% - 12px); margin-bottom: 8px; }
+.form-row { display: flex; gap: 8px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  color: #042;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: inherit; }
+
+/* Lists & items */
+.list { margin-top: 12px; }
+.list .item {
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--glass);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.item .meta { display: flex; flex-direction: column; }
+.list .item .meta strong { display: block; }
+.item small { color: var(--muted); }
+
+.admin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+
+/* Page-specific / utilities */
+#searchInput { padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); background: transparent; color: inherit; flex: 1; }
+
+/* Map embed styling */
+.map-wrap { margin-top: 12px; border-radius: 10px; overflow: hidden; }
+.map-frame { width: 100%; height: 280px; border: 0; display: block; }
+
+/* Responsive */
+@media (max-width: 520px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .auth-card  { padding: 18px; }
+  .map-frame { height: 220px; }
+  .form-row { flex-direction: column; }
+}
+

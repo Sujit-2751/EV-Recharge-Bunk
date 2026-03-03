@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Find EV Bunks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>EV Recharge Bunk</h1>
+    <div class="header-actions">
+      <p class="tag">Find nearby chargers</p>
+      <nav>
+        <a class="btn ghost" href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Search Nearby EV Bunks</h2>
+      <div class="form-row">
+        <input id="searchInput" placeholder="Search by name or address" />
+        <button id="locBtn" class="btn">Use my location</button>
+      </div>
+      <p id="status" class="muted"></p>
+      <p class="muted">Results sorted by distance from your selected location.</p>
+
+      <div id="results" class="list" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h3>Map / Details</h3>
+      <div id="details" class="list"></div>
+    </section>
+  </main>
+
+  <!-- Modal removed; details are shown inline in the details section to avoid popups -->
+
+  <script src="user.js"></script>
+</body>
+</html>

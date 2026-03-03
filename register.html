@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EV Recharge — Register</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Create account</h1>
+    <p class="tag">Join the EV recharge network</p>
+  </header>
+
+  <main class="container">
+    <section class="card auth-card">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <label>Full name
++          <input type="text" id="regName" required>
++        </label>
++        <label>Email
++          <input type="email" id="regEmail" required>
++        </label>
++        <label>Username
++          <input type="text" id="regUsername" required>
++        </label>
++        <label>Password
++          <input type="password" id="regPassword" required>
++        </label>
++        <label>Role
++          <select id="regRole">
++            <option value="user">User</option>
++            <option value="admin">Admin</option>
++          </select>
++        </label>
++        <button type="submit" class="btn">Create account</button>
++      </form>
++      <p class="muted">Already have an account? <a href="index.html">Sign in</a></p>
++    </section>
++  </main>
++
++  <script src="script.js"></script>
++</body>
++</html>

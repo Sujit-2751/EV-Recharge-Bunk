@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EV Recharge — Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>EV Recharge Bunk</h1>
+    <div class="header-actions">
+      <p class="tag">Fast. Smart. Sustainable.</p>
+      <nav>
+        <a class="btn ghost" href="user.html">Find Bunks</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card auth-card">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label>Username
+          <input type="text" id="loginUsername" required>
+        </label>
+        <label>Password
+          <input type="password" id="loginPassword" required>
+        </label>
+        <button type="submit" class="btn">Sign in</button>
+      </form>
+      <p class="muted">Don’t have an account? <a href="register.html">Register</a></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
